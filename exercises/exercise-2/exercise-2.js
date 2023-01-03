@@ -70,3 +70,24 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+let [firstName, lastName, house, pet, occupation] = hogwarts;
+
+//task 1
+function inGryffindor(hogwarts) {
+  let gryffindorArray = hogwarts
+    .filter((element) => element.house === "Gryffindor")
+    .map((element) => `${element.firstName} ${element.lastName}`);
+  return gryffindorArray;
+}
+console.log(inGryffindor(hogwarts));
+
+//task 2
+function teachersWithPets(hogwarts) {
+  let havePetsArray = hogwarts
+    .filter(
+      (element) => element.pet !== null && element.occupation == "Teacher"
+    )
+    .map((element) => element.firstName + " " + element.lastName);
+  return havePets;
+}

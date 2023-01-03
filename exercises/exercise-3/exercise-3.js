@@ -6,3 +6,17 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function printReceipt(order) {
+  let total = 0;
+  const columns = ["QTY", "ITEM", "TOTAL"];
+  const data = [];
+  let item = order.forEach((item) => data.push(itemName));
+  let qty = order.forEach((item) => data.push(quantity));
+  let totalItem = order.forEach((item) => {
+    const sum = unitPrice * quantity;
+    total += sum;
+  });
+
+  console.table(data, columns);
+}

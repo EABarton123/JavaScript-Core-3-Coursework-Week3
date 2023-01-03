@@ -10,4 +10,6 @@ function introduceYourself(___________________________) {
   );
 }
 
+let { name, age, favouriteFood } = personOne;
+
 introduceYourself(personOne);
